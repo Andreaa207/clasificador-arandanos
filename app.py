@@ -2,6 +2,7 @@
 import gradio as gr
 import tensorflow as tf
 import numpy as np
+import os
 from huggingface_hub import hf_hub_download
 
 # Descargar el modelo desde Hugging Face
@@ -48,4 +49,7 @@ app = gr.Interface(
     description="Aplicación basada en una red neuronal convolucional (CNN)."
 )
 
-app.launch()
+app.launch(
+    server_name="0.0.0.0",
+    server_port=int(os.environ.get("PORT", 10000))
+)
