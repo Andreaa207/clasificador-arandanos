@@ -1,5 +1,5 @@
-gradio
+streamlit
 tensorflow
 numpy
-huggingface_hub
 Pillow
+huggingface_hub
